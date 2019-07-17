@@ -125,10 +125,10 @@ for epoch in range(num_epoch):
 
     #save real images for reference in first epoch
     if epoch == 0:
-        real_images = to_img(real_imgs_flatten.data)
+        real_images = to_img(real_imgs.data)
         save_image(real_images, './mnist/out_imgs_gan_conv/real_images.png')
     #save fake images at end of each epoch
-    fake_images = to_img(fake_imgs_vector)
+    fake_images = to_img(fake_imgs.data)
     save_image(fake_images, './mnist/out_imgs_gan_conv/fake_images_epoch{}.png'.format(epoch))
 
 #save trained models
